@@ -1,0 +1,7 @@
+<form [formGroup]="dynamicForm">
+    <div *ngFor="let f of formsObject">
+        <label [for]="f.name">{{f.label}}</label>
+        <input [formControlName]="f.name" [id]="f.name" [type]="f.type">
+    </div>
+</form>
+<button (click)="onButtonClicked()">Click me</button>

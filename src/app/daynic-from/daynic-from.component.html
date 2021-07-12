@@ -1,0 +1,7 @@
+<form #signupForm="ngForm">
+    <div *ngFor="let f of formsObject">
+        <label [for]="f.name">{{f.label}}</label>
+        <input [name]="f.name" [id]="f.name" [type]="f.type" [placeholder]="f.placeHolder" ngModel>
+    </div>
+</form>
+<button (click)="onButtonClicked()">Click me</button>
